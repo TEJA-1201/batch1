@@ -1,0 +1,67 @@
+git init ( for specified path )
+git config --global user.name "Rohith Kumar Arrem"   ( to configure user name )
+git config --global user.email "rohithkumararrem76@gmail.com"  ( to email address )
+
+To make changes to already configured user name or email use the same command that is used for configuaration.
+
+
+git config --list  ( to check configured user name and email address )
+
+git config --global --unset user.name  ( to remove configured user name )
+git config --global --unset user.email ( to remove configured email address )
+
+--------------------------------------------------
+Commands to add single file from local machine to staging/index and again sending them to local repository.
+
+git init--> to create a specified path
+
+touch file1--> to create a empty file
+
+ls--> to display created file
+
+git status--> to check the status of the file whether it is in workspace or index using color code ex red= Work Space, green=index.
+
+git add file1-> to add file from workspace to index 
+
+git status--> again to check status of file
+
+git commit -m "label" file name--> to send file from index to local repository.
+
+git log--> to check the log details and commit id of file in local repository.
+
+git show cid--> to check the status in local repository.
+
+This command is only to send to single file from  workspace to index to local repository.
+
+-----------------------------------------------------
+
+Commands to add multiple file from wrorkspace to index to local repo.
+
+touch file3 file4 file5
+
+git status
+
+git add file3 file4 file5 or git add. or git add*--> to move multiple files frm local machine to index
+
+git commit -m "file3,4,5"--> to send files from index to local repo
+
+git log--> to check log details and commit id of three files
+
+git show cid--> to check the status of files in local repo.
+
+These commands are to send multiple files from workspace to index to local repo.
+
+------------------------------------------------------
+
+Commands to remove files.
+
+git add file1 (workspace to staging)
+
+git reset head file1 (staging to workspace)
+
+git commit -m "label" file1 (staging to local)
+
+git reset --soft cid (local to staging) Here Cid must be collected in (n-1) formula.
+
+git reset --mixed cid (local to workspace) In this commmand all the files which are in staging also comes back to workspace.
+
