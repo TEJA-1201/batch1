@@ -19,7 +19,51 @@ touch file1--> to create a empty file
 
 ls--> to display created file
 
-git status--> to check the status of the file whether it is in workspace or index using color code ex red= Work Space, green=index.
+
+Confilicts:
+===========
+cd ..
+mkdir file name
+ls
+cd file name
+git init
+branch name ( master)
+touch files
+git add .
+git commit -m "label"
+ls
+git checkout -b rlease1^c
+git branch
+git checkout -b release1
+ls
+vi file1
+ edit esc-I
+ type the msg
+ esc shift:wq!( enter)
+cat fl.
+git commit -m "label"
+cat file1( release1)
+git checkout master
+cat file1
+ empty
+vi file1
+ edit
+git status
+git add .
+git commit -m "lable"
+cat file1( master)
+git merge release1
+ confilict error
+git merge --abort
+git merge release1
+vi file1
+  edit the text
+git add .
+git commit -m "label"
+cat file1
+git checkout release1
+git merge master
+cat file1git status--> to check the status of the file whether it is in workspace or index using color code ex red= Work Space, green=index.
 
 git add file1-> to add file from workspace to index 
 
@@ -64,4 +108,53 @@ git commit -m "label" file1 (staging to local)
 git reset --soft cid (local to staging) Here Cid must be collected in (n-1) formula.
 
 git reset --mixed cid (local to workspace) In this commmand all the files which are in staging also comes back to workspace.
+git clone https://github.com/polarapu/batch74.git
+ls
+cd batch74
+touch file1
+git status
+git add .
+git status
+git commit -m "label" file1
+git status
+git log
+git push
+git rm -rf file name
+---------------------------------------------------------------
+Manage adminn
+setting - manage user - add people 
+git clone https://github.com/polarapu/batch74.git
+ls
+cd batch74
+touch name
+git status
+git add name
+git status
+git commit -m "sample devops file"
+git push
+git pull --rebase
+git push
 
+mkdir name-dir
+ls
+cd name-dir
+touch f1 f2 f3
+cd ..( directory ) 
+git status
+git add .
+git status
+git commit -m "label"
+git push
+git pull --rebase ( central to reload file to local ) 
+git push
+Remove the file ( dir)
+ls
+cd file-dir/
+ls
+rm -rf f2
+git status
+git add .
+git commit -m ""label"
+git push
+:wq!
+:wq!
